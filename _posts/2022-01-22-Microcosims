@@ -10,7 +10,7 @@ Raylib, a flexible game-making library written in C that can be built cross plat
 
 ## [](#what-has-been-built)What has been built?
 
-
+![](https://github.com/nullreference8/nullreference8.github.io/blob/main/assets/2022-01-22-chop-tree.gif?raw=true)
 
 Each unit has a job queue and an inventory. A job is made up of a series of tasks that must be completed in order to move on to the next task. Let's break down the job that chops down a tree and stores a log into its tasks. The job is created after a player designates a tree to be chopped and a unit capable of performing the job is found by the game engine. 
 
@@ -28,4 +28,7 @@ Now the unit has chopped down the tree and has stored the resulting logs in its 
 3. While the unit's target location is not the unit's current location, move the unit according to its movement speed along the path
 4. Remove the item from the unit's inventory and place it in the square's inventory
 
-This is the level of detail required in order to do even the most simple things when building a game. I have even glossed over a number of complexities here like the user interface, defining keyboard and mouse input, and the entire inventory and item system.
+This is the level of detail required in order to do even the most simple things when building a game. I have even glossed over a number of complexities here like the user interface, defining keyboard and mouse input, and the entire inventory and item system. You might have even noticed the error at the end of the little sample above (that I've since fixed). 
+
+## [](#next-steps)Next Steps
+With the basic goal I set for myself completed, two main things are on the to-do list. First, I need to generate a basic map procedurally with resouces for units to collect. The core component of this project is building a procedurally generated world, so this step will take a significant amount of time, research, and effort. I know almost nothing about procedural generation, so it will be as challenging as getting started with C++. From my early searching it seems that much of the knowledge in this area is written in the form of research papers, not code examples, so that will be an additional hurdle. Second, I'll need a way to store the generated map and the state of everything I wrote about above. For this I will use a locally stored relational database, SQLite3. All of the components I wrote about above will need to be directed to the database file instead of system memory where they currently reside. 
